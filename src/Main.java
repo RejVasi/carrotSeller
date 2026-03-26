@@ -1,15 +1,16 @@
+import java.time.LocalDate;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Main
+{
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Birthdate in YYYY, MM, DD
+        CarrotSeller firsCarrotSeller = new CarrotSeller("Jan Novotný", LocalDate.of(1978, 1, 24), 7, 8.5, true);
+        CarrotSeller secondCarrotSeller = new CarrotSeller("Marek Nový", LocalDate.of(1985, 1, 12), 2, 4.2, false);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        System.out.println(firsCarrotSeller.getSellerName());
+        System.out.println(secondCarrotSeller.getSellerName());
+
     }
 }
